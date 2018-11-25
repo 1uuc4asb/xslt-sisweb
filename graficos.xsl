@@ -91,14 +91,14 @@
                                         <xsl:value-of select="ano" />
                                     </svg:text>
                                     <!-- Grade Vertical do grafico -->
-                                    <svg:line x1="{(ano - 1999) * 13 - 51}" y1="14" x2="{(ano - 1999) * 13 - 51}" y2="86.5" style="stroke:rgb(224,224,224    );stroke-width:0.2" />
+                                    <svg:line x1="{(ano - 1999) * 13 - 51}" y1="9" x2="{(ano - 1999) * 13 - 51}" y2="86.5" style="stroke:rgb(224,224,224    );stroke-width:0.2" />
                                     <!-- Grade Vertical do grafico -->
 
                                     <!-- Numeros dos anos no grafico -->
 
 
                                     <xsl:variable name="uni_num" select="90 - (ano - 1999) * 7" />
-                                    <xsl:if test="ano - 1999 &lt; 11">
+                                    <xsl:if test="ano - 1999 &lt; 12">
                                         <!-- Numeros da qt.de universidades no grafico -->
                                         <svg:text x="-45" y="{$uni_num}" font-size="3">
                                             <xsl:value-of select="ano - 1999" />
@@ -209,10 +209,15 @@
 
                             <!-- Bordas do gráfico -->
 
-                            <svg:line x1="-40" y1="14" x2="152" y2="14" style="stroke:rgb(0,0,0);stroke-width:0.5" />
+                            <!-- Bordas horizontais -->
+                            <svg:line x1="-40" y1="9" x2="152" y2="9" style="stroke:rgb(0,0,0);stroke-width:0.5" />
                             <svg:line x1="-40" y1="86.5" x2="152" y2="86.5" style="stroke:rgb(0,0,0);stroke-width:0.5" />
-                            <svg:line x1="-40" y1="14" x2="-40" y2="86.5" style="stroke:rgb(0,0,0);stroke-width:0.5" />
-                            <svg:line x1="152" y1="14" x2="152" y2="86.5" style="stroke:rgb(0,0,0);stroke-width:0.5" />
+                            <!-- Bordas horizontais -->
+
+                            <!-- Bordas verticais -->
+                            <svg:line x1="-40" y1="9" x2="-40" y2="86.5" style="stroke:rgb(0,0,0);stroke-width:0.5" />
+                            <svg:line x1="152" y1="9" x2="152" y2="86.5" style="stroke:rgb(0,0,0);stroke-width:0.5" />
+                            <!-- Bordas verticais -->
 
                             <!-- Bordas do gráfico -->
 
